@@ -7,9 +7,21 @@ addToDo.addEventListener('click', function(){
         alert("Please write your to-do.");
     else
     {
-        var list = document.createElement('li');
-        list.innerText = inputField.value;
+        var list = document.createElement('p');
+        var checkbox = document.createElement('input');
+        var label = document.createElement('label');
+        
+        checkbox.type = "checkbox";
+        checkbox.id = inputField.value;
+        checkbox.class = "checkbox";
+        label.for = inputField.value;
+        label.innerText = inputField.value;
+        
+        list.appendChild(checkbox);
+        list.appendChild(label);
+
         toDoList.appendChild(list);
+
         inputField.value = '';
     }
 })
