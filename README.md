@@ -8,3 +8,6 @@
 
 <img src="https://github.com/SuyoungPark22/To-do-list/assets/80474128/b69f9b9d-107e-4ece-8e6c-80226f7ca6e9">
 <li>checkbox</li>
+
+<h3>19 Jan 2024</h3>
+<li>press enter key to add list</li>
