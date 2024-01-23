@@ -25,3 +25,9 @@ p {
     margin-top: 7px;
     margin-bottom: 7px;
 }
+
+.delButton {
+    margin-left: 7px;
+    padding: 3px;
+    font-size: 8px;
+}
