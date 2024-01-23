@@ -24,6 +24,16 @@ addButton.addEventListener('click', () => {
     addToDo();
 })
 
+toDoList.addEventListener('change', (event) => {
+    var button = event.target;
+    var text = event.target.nextElementSibling;
+    if (button.checked == true)
+        text.style.textDecoration = 'line-through';
+    else
+        text.style.textDecoration = 'none';
+    event.stopPropagation();
+}, false)
+
 function addToDo(){
     if (!inputField.value)
         alert("Please write your to-do.")
@@ -31,17 +41,15 @@ function addToDo(){
     {
         var list = document.createElement('p');
         var checkbox = document.createElement('input');
-        var label = document.createElement('label');
+        var text = document.createElement('span');
         
         list.id = inputField.value;
         checkbox.type = "checkbox";
-        checkbox.id = inputField.value;  
-        checkbox.setAttribute("class", "checkbox");
-        label.for = inputField.value;
-        label.innerText = inputField.value;
+        checkbox.id = inputField.value;
+        text.innerText = inputField.value;
         
         list.appendChild(checkbox);
-        list.appendChild(label);
+        list.appendChild(text);
 
         toDoList.appendChild(list);
 
